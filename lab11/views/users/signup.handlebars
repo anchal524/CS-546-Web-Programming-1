@@ -1,0 +1,36 @@
+<main>
+    <h1>User signup</h1>
+    <form
+        id="signup-form"
+        action="/signup"
+        method="POST"
+        class="user-signup-form"
+    >
+        <label>Username
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+                value="{{username}}"
+            />
+        </label><br /><br />
+        <label>Password
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                value="{{password}}"
+            />
+        </label><br /><br />
+        <button type="submit">Signup</button>
+        <button type="reset">Clear Form</button>
+    </form>
+    {{#if hasErrors}}
+        <p class="error">{{errorMessage}}</p>
+    {{/if}}
+</main>
+<div>
+    <a href="/">Already have an account? Click here to log-in</a>
+</div>

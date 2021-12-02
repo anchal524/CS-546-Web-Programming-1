@@ -1,0 +1,22 @@
+<main>
+    <header>
+        <h1>Search Shows</h1>
+    {{ <ul hidden="hidden" id="showList"> }}
+        {{#each showsData}}
+            <li><a href={{showsData._links.self.href}}>{{showsData.name}}</a></li>
+        {{/each}}
+    </ul>
+    <div class="show" id="show" hidden></div>
+    <div class="shows-search">
+        <form id="search-form">
+            <label for="search_term">Search Shows</label>
+            <input id="search_term" type="text" />
+            <button type="submit">Search the show</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <p>
+        Anchal Bansal 10478699
+    </p>
+</footer>
